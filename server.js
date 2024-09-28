@@ -59,7 +59,6 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 app.post('/submit', async (req, res) => {
-    try {
         // Log incoming request data to debug
         console.log("Request Body:", req.body);
 
@@ -80,15 +79,7 @@ app.post('/submit', async (req, res) => {
         const savedDetails = await details.save();
         res.status(201).render('details.ejs', { details: savedDetails });
         console.log("Details saved to database");
-    } catch (error) {
-        // Log specific error messages for debugging
-        console.error("Error saving details:", error.errors ? error.errors.fullName.message : error.message);
-        if (error.code === 11000) {
-            res.status(400).send("Duplicate email or phone number. Please use a unique value.");
-        } else {
-            res.status(400).send(`Error: ${error.message}`);
-        }
-    }
+    
 });
 
 
