@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+}
+.container {
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+h1 {
+    text-align: center;
+    color: rgb(238, 11, 11);
+    margin-bottom: 10px;
+}
+form {
+    display: grid;
+    gap: 15px;
+}
+label {
+    font-weight: bold;
+    color: white;
+}
+input, select, textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 4px;
+    font-size: 16px;
+}
+input[type="submit"] {
+    background-color: rgb(8, 241, 85); /* Consistent green color */
+    color: black;
+    border: none;
+    padding: 10px; /* Larger padding for button */
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover state for submit button */
+input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Smaller submit button for compact layout */
+input[type="submit"]:active {
+    background-color: #3e8e41; /* Even darker green on click */
+    transform: translateY(0); /* Remove lift effect */
+}
+
+input[type="date"] {
+    width: 180px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
