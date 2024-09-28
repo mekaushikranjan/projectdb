@@ -1,0 +1,12 @@
+{
+    "name": "student-details",
+    "version": "1.0.0",
+    "description": "A simple student details form",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        
+    }
+}
